@@ -32,9 +32,6 @@ sed -i 's|common-licenses/GPL|licenses/webapp-manager/LICENSE.txt|g' usr/lib/web
 # fix version
 sed -i "s|__DEB_VERSION__|%{version}|g" usr/lib/webapp-manager/webapp-manager.py
 
-#fix launcher
-sed -i "s|/usr/lib|PYTHONPATH=/usr/lib/webapp-manager /usr/lib/|g" usr/bin/webapp-manager
-
 
 %build
 export LANG=C.UTF-8
