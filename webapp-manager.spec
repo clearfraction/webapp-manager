@@ -3,7 +3,7 @@ Version  : 21
 Release  : 1
 URL      : https://github.com/linuxmint/webapp-manager/
 Source0  : https://github.com/linuxmint/webapp-manager/archive/refs/tags/master.mint%{version}.tar.gz
-Source1  : https://github.com/linuxmint/xapp/archive/refs/tags/2.4.0.tar.gz
+Source1  : https://github.com/linuxmint/xapp/archive/refs/tags/2.4.3.tar.gz
 Summary  : Run websites as if they were apps.
 Group    : Development/Tools
 License  : GPLv3
@@ -46,7 +46,7 @@ export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
 export MAKEFLAGS=%{?_smp_mflags}
 make
 pushd xapp*
-meson --libdir=lib64 --prefix=/usr --buildtype=plain   builddir
+meson --libdir=lib64 --prefix=/usr --buildtype=plain -D deprecated_warnings=false   builddir
 ninja -v -C builddir
 DESTDIR=/ ninja -C builddir install
 popd
