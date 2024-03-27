@@ -57,9 +57,9 @@ install -pD -m644 LICENSE %{buildroot}/usr/share/licenses/webapp-manager/LICENSE
 pushd xapp*
   DESTDIR=%{buildroot} ninja -C builddir install
 popd
-cp -r /usr/lib/python3.11/site-packages/{pkg_resources,_distutils_hack,setuptools,pygtkcompat,gi,idna,certifi,charset_normalizer,filelock,soupsieve,six.py,urllib3,requests,tldextract,bs4,PIL,setproctitle,_version.py,validate.py,usrlocal.pth,requests_file.py,configobj.py} %{buildroot}/usr/lib/webapp-manager/
-cp -r %{buildroot}/usr/lib/python3.11/site-packages/* %{buildroot}/usr/lib/webapp-manager/
-rm -rf %{buildroot}/usr/lib/python3.11
+cp -r /usr/lib/python*/site-packages/{pkg_resources,_distutils_hack,setuptools,pygtkcompat,gi,idna,certifi,charset_normalizer,filelock,soupsieve,six.py,urllib3,requests,tldextract,bs4,PIL,setproctitle,_version.py,validate.py,usrlocal.pth,requests_file.py,configobj.py} %{buildroot}/usr/lib/webapp-manager/
+cp -r %{buildroot}/usr/lib/python*/site-packages/* %{buildroot}/usr/lib/webapp-manager/
+rm -rf %{buildroot}/usr/lib/python*
 cp -r /usr/lib64/{libgnomekbd*,libgnomekbdui*,libxklavier*} %{buildroot}/usr/lib64
 rm -rf %{buildroot}{/usr/include,/usr/lib64/pkgconfig,/usr/share/glade/,/usr/share/vala,/usr/share/gir-1.0/XApp-1.0.gir}
 rm -rf %{buildroot}/usr/lib/webapp-manager/{meson*,packaging*,dnf*,rpm*,pip*}
