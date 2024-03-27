@@ -3,7 +3,7 @@ Version  : 21
 Release  : 1
 URL      : https://github.com/linuxmint/webapp-manager/
 Source0  : https://github.com/linuxmint/webapp-manager/archive/refs/tags/master.mint%{version}.tar.gz
-Source1  : https://github.com/linuxmint/xapp/archive/refs/tags/2.4.3.tar.gz
+Source1  : https://github.com/linuxmint/xapp/archive/refs/tags/2.8.2.tar.gz
 Summary  : Run websites as if they were apps.
 Group    : Development/Tools
 License  : GPLv3
