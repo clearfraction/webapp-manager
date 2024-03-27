@@ -70,6 +70,7 @@ rm -rf %{buildroot}/usr/lib/webapp-manager/{meson*,packaging*,dnf*,rpm*,pip*}
 /usr/bin/pastebin
 /usr/bin/upload-system-info
 /usr/bin/xfce4-set-wallpaper
+/usr/bin/xapp-gpu-offload
 /usr/lib/webapp-manager
 /usr/lib64
 /usr/share/applications/kde4/webapp-manager.desktop
